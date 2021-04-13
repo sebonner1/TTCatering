@@ -3,7 +3,7 @@ const checkoutbutton = document.getElementById("checkoutbutton");
 // the below syntax from research
 checkoutbutton.addEventListener("click", (e) => {
     alert("You are being directed to the calendar.");
-    window.location.href= "../Calendar.html";
+    window.location.href= "../resources/Calendar.html";
 })
 
 var owner = $('#owner'),
