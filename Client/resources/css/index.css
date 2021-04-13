@@ -1,0 +1,85 @@
+.navbar{
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: "Montserrat";
+}
+
+.navbar li{
+    display: inline;
+    padding:20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover /*looks crazy but only way could get Home and Login buttons same as background*/
+{
+    background-color: gray;
+}
+
+a.red {
+    color: #990000;
+}
+
+.banner{
+    background-color: #ffffff;
+    color: #990000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,fantasy;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#menuitems{
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 25%;
+    font-family: "Montserrat";
+}
+
+#shoppingcartimage{
+    border-radius: 50%;
+    height:40px;
+}
+
+#shoppingcartbutton{
+    border-radius: 50%;
+    height:50px;
+    text-align: center;
+}
+
+.shoppinglist {
+    float: right;
+    width: 30%;
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    font-family: "Montserrat";
+    height: auto;
+}
+
+
+.menubulletpoints {
+    list-style-type: circle;
+    text-align: left;
+    font-family: "Montserrat";
+}
+
+#checkoutbutton{
+    background-color: #660000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: black;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
