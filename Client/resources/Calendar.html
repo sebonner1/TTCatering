@@ -6,17 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Calendar</title>
     <link rel="stylesheet" href="../resources/css/Calendar.css">
-    <link rel="stylesheet" href="https://www.webcodegeeks.com/wp-content/litespeed/localres/maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://www.webcodegeeks.com/wp-content/litespeed/localres/maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <style>html { font-size: 12px; font-family: Arial, Helvetica, sans-serif; }</style>
     <title>Scheduling Calendar</title>
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.common-material.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.material.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.min.css" />
-    <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.429/styles/kendo.dataviz.material.min.css" />
- 
-    <script src="http://cdn.kendostatic.com/2015.1.429/js/jquery.min.js"></script>
-    <script src="http://cdn.kendostatic.com/2015.1.429/js/kendo.all.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -30,17 +20,80 @@
         <!--Questions for office hours: why does the href not work and go to their website? And how can I do something on the selection of a date??-->
     </nav>
     <div id="Calendar">
-        <div class="demo-section k-header" style="width: 100%; text-align: center; background-color: #660000;">
-                      <div id="calendar"></div>
-                 </div>
-                <script>
-                    $(document).ready(function() {
-                        // create Calendar from div HTML element
-                        $("#calendar").kendoCalendar();
-                    });
-                </script>
-            </div>
-    <!--
+      <iframe src="https://calendar.google.com/calendar/embed?src=titletowncatering%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+      
+      <form name="month" id="month" action="/action_page.php">
+        Month: <select name="Day" id="date">
+          <option value="" selected="selected">Choose a month</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        <br><br>
+        Day: <select name="day" id="day">
+          <option value="" selected="selected">Please select a month first</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+        <br><br>
+        Time: <select name="time" id="time">
+          <option value="" selected="selected">Please select a day first</option>
+          <option value="7:00 AM">7:00 AM</option>
+          <option value="8:00 AM">8:00 AM</option>
+          <option value="9:00 AM">9:00 AM</option>
+          <option value="10:00 AM">10:00 AM</option>
+          <option value="11:00 AM">11:00 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="1:00 PM">1:00 PM</option>
+          <option value="2:00 PM">2:00 PM</option>
+          <option value="3:00 PM">3:00 PM</option>
+          <option value="4:00 PM">4:00 PM</option>
+          <option value="5:00 PM">5:00 PM</option>
+          <option value="6:00 PM">6:00 PM</option>
+          <option value="7:00 AM">7:00 PM</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <!--
 <div class="month">
     <ul>
       <li class="prev">&#10094;</li>

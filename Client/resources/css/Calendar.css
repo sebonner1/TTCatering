@@ -10,7 +10,7 @@ body {
 .month {
   padding: 70px 25px;
   width: 100%;
-  background: #660000;
+  background: #666;
   text-align: center;
 }
 
@@ -31,12 +31,14 @@ body {
 .month .prev {
   float: left;
   padding-top: 10px;
+  background: #666;
 }
 
 /* Next button */
 .month .next {
   float: right;
   padding-top: 10px;
+  background: #666;
 }
 
 /* Weekdays (Mon-Sun) */
@@ -146,6 +148,8 @@ a:-webkit-any-link{
 
 #Calendar{
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .demo-section k-header{
