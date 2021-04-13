@@ -97,3 +97,8 @@
 /Users/williambonner/Source/repos/TTCatering/API/obj/Debug/net5.0/ref/API.dll
 /Users/williambonner/Source/repos/TTCatering/API/obj/Debug/net5.0/API.pdb
 /Users/williambonner/Source/repos/TTCatering/API/obj/Debug/net5.0/API.genruntimeconfig.cache
+/Users/williambonner/Source/repos/TTCatering/API/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/Users/williambonner/Source/repos/TTCatering/API/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/williambonner/Source/repos/TTCatering/API/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/williambonner/Source/repos/TTCatering/API/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/williambonner/Source/repos/TTCatering/API/obj/Debug/net5.0/API.MvcApplicationPartsAssemblyInfo.cs
