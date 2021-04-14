@@ -38,11 +38,11 @@ namespace API.Controllers
         // POST: api/cartAPI
         [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] cart value)
         {
             Console.WriteLine(value);
             iPostCart insertObject = new saveData();
-            insertObject.UpdateCart(value);
+            insertObject.UpdateCart(value.itemName);
         }
 
         // PUT: api/cartAPI/5
