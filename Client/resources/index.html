@@ -11,6 +11,7 @@
 </head>
 <body>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src= "./scripts/cartfunc.js""></script>
     <!--Banner Section-->
     <div class="banner">
         <h1 style = "font-size: 50px;">Title Town Catering</h1>
@@ -41,7 +42,7 @@
     <h2><u>In Your Cart</u></h2>
     <p>
         <!--Note to self: try not to hard code here. The manager will add things to the list-->
-        <script type = "text/javascript" src = "/Cartfunctions/cartfunc.js">
+        <script type = "text/javascript" src = "./scripts/cartfunc.js">
         getCart();
         </script>
 
@@ -54,7 +55,7 @@
         <!--Photos begin here-->
         <div class="menu-display">
             <div>
-                <button id ="chickenParmbutton"><img id = "chickenParmImage" src = "./images/chickenparm2.jpeg" alt=""></button>
+                <button onclick ="chickenparmfunction()" id ="chickenParmbutton"><img id = "chickenParmImage" src = "./images/chickenparm2.jpeg" alt=""></button>
                 <button id ="chocochipbutton"><img id = "chocochipImage" src = "./images/chocchip2.jpeg" alt=""></button>
             </div>
             <div>
