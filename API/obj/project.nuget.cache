@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Yi2HjAisqWL03ewo2fy1arV/x2tgzF4TqSvjyHwOA2MBG9WEYHh5UW9FyRzLgxWlMxq8ACIefVoKcPYEzuNvlA==",
+  "dgSpecHash": "Y/D34dv2njnXD7+VuKaSsqimFNxVmu+YYTq+cdrPRr3SjFwLynA5Cpr3Y/fqO2Ohgsr7N/cTGfBp0BTB1IbOsQ==",
   "success": true,
   "projectFilePath": "/Users/katherine/Documents/TTCatering/API/API.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "/Users/katherine/.nuget/packages/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/katherine/.nuget/packages/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/katherine/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "/Users/katherine/.nuget/packages/stub.system.data.sqlite.core.netstandard/1.0.113.2/stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
     "/Users/katherine/.nuget/packages/swashbuckle.aspnetcore/6.1.2/swashbuckle.aspnetcore.6.1.2.nupkg.sha512",
     "/Users/katherine/.nuget/packages/swashbuckle.aspnetcore.swagger/6.1.2/swashbuckle.aspnetcore.swagger.6.1.2.nupkg.sha512",
     "/Users/katherine/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.1.2/swashbuckle.aspnetcore.swaggergen.6.1.2.nupkg.sha512",
@@ -65,6 +66,7 @@
     "/Users/katherine/.nuget/packages/system.composition.runtime/1.0.31/system.composition.runtime.1.0.31.nupkg.sha512",
     "/Users/katherine/.nuget/packages/system.composition.typedparts/1.0.31/system.composition.typedparts.1.0.31.nupkg.sha512",
     "/Users/katherine/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
+    "/Users/katherine/.nuget/packages/system.data.sqlite.core/1.0.113.7/system.data.sqlite.core.1.0.113.7.nupkg.sha512",
     "/Users/katherine/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
     "/Users/katherine/.nuget/packages/system.diagnostics.diagnosticsource/4.3.0/system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
     "/Users/katherine/.nuget/packages/system.diagnostics.tools/4.3.0/system.diagnostics.tools.4.3.0.nupkg.sha512",

@@ -206,3 +206,8 @@
 /Users/katherine/Documents/TTCatering/API/obj/Debug/net5.0/ref/API.dll
 /Users/katherine/Documents/TTCatering/API/obj/Debug/net5.0/API.pdb
 /Users/katherine/Documents/TTCatering/API/obj/Debug/net5.0/API.genruntimeconfig.cache
+/Users/katherine/Documents/TTCatering/API/bin/Debug/net5.0/System.Data.SQLite.dll
+/Users/katherine/Documents/TTCatering/API/bin/Debug/net5.0/runtimes/linux-x64/native/SQLite.Interop.dll
+/Users/katherine/Documents/TTCatering/API/bin/Debug/net5.0/runtimes/osx-x64/native/SQLite.Interop.dll
+/Users/katherine/Documents/TTCatering/API/bin/Debug/net5.0/runtimes/win-x64/native/SQLite.Interop.dll
+/Users/katherine/Documents/TTCatering/API/bin/Debug/net5.0/runtimes/win-x86/native/SQLite.Interop.dll

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Cartfunctions.addCart;
-using Cartfunctions.removeCart;
-using Cartfunctions.updateCart;
-using Cartfunctions.getCart;
+using TTCatering.Cartfunctions.addCart;
+using TTCatering.Cartfunctions;
+using API.Cartfunctions.getCart;
+using TTCatering.Cartfunctions.removeCart;
+using TTCatering.Cartfunctions.updateCart;
+using API.Cartfunctions;
 
 namespace API.Controllers
 {
@@ -18,7 +20,7 @@ namespace API.Controllers
         // GET: api/cartAPI
         //[EnableCors("AnotherPolicy")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<cart> Get()
         {
             iReadAllData readObject = new readData();
             return readObject.GetAllItems();
@@ -38,7 +40,7 @@ namespace API.Controllers
         public void Post([FromBody] string value)
         {
             iPostCart insertObject = new saveData();
-            insertObject.InsertPost(value);
+            insertObject.UpdateCart(value);
         }
 
         // PUT: api/cartAPI/5
@@ -57,7 +59,7 @@ namespace API.Controllers
         {
             iDelCart deleteObject = new delCart();
             deleteObject.DeleteCartItem(id);
-            Console.WriteLien(id);
+            Console.WriteLine(id);
         }
     }
 }
