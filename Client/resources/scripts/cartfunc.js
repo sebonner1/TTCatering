@@ -1,6 +1,6 @@
 console.log("javascript loaded");
 function getCart(){
-    const allCartAPIURL = "https://localhost:5000/api/MenuItems";
+    const allCartAPIURL = "https://localhost:5000/api/cartAPI";
 
     fetch(allCartAPIURL).then(function(response){
         return response.json();
@@ -48,10 +48,10 @@ function delCart(cartid){
     })
 }
 function chickenparmfunction(){
-    const addPostsAPIURL = "https://localhost:5000/api/cartAPI";
+    const postCartAPIURL = "https://localhost:5000/api/cartAPI";
     const itemPost = "chickenparm";
     console.log(itemPost);
-    fetch(addPostsAPIURL, {
+    fetch(postCartAPIURL, {
         method: "POST",
         headers: {
             "Accept": 'application/json',
