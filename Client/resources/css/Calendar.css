@@ -199,8 +199,26 @@ html{
   opacity: 1;
 }
 
+#calendar{
+  height: auto;
+  margin-top: 60px;
+  text-align: center;
+  padding: 10px;
+}
+
 #container{
   background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+#submitbutton{
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: black;
+  cursor: pointer;
   width: 100%;
   text-align: center;
 }

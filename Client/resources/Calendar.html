@@ -18,17 +18,15 @@
         </ul>
         </div>
         <!--Questions for office hours: why does the href not work and go to their website? And how can I do something on the selection of a date??-->
-    </nav>
-    <div id="Calendar">
-      <iframe src="https://calendar.google.com/calendar/embed?src=titletowncatering%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
-    </div>  
+    </nav>  
 
 <script src="https://jsuites.net/v4/jsuites.js"></script>
 <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
 <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
- 
+<div id="calendar">
 <jsuites-calendar value="2021-01-20" format="DD/MM/YYYY"></jsuites-calendar>
- 
+</div>
+
 <script>
 document.querySelector('jsuites-calendar').addEventListener('onchange', function(e) {
     console.log('New value: ' + e.target.value);
@@ -63,14 +61,11 @@ document.querySelector('jsuites-calendar').addEventListener('onclose', function(
           <option value="Delivery">Delivery</option>
         </select>
         <br><br>
-        Address: <input type="text" id="address" name="Address">
-        <br><br>
-        <input type="submitbutton" value="Submit">
+        Address: <input type="text" id="address" name="Address"></form>
+        <button id="submitbutton">Submit</button>
       </div>
       <script src="https://jsuites.net/v4/jsuites.js"></script>
 <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
- 
-<input id='calendar'>
  
 
       <!--
@@ -125,5 +120,6 @@ document.querySelector('jsuites-calendar').addEventListener('onclose', function(
   </ul>
   -->
     <script src="./scripts/calendar.js"></script> <!--put scripts at the bottom-->
+    <script src="./scripts/receipt.js"></script>
 </body>
 </html>
