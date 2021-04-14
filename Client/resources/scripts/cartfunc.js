@@ -18,7 +18,7 @@ function getCart(){
     })
 }
 function addCart(cartid){
-    const addCartAPIURL = "https://localhost:5000/api/cartAPI" + cartid;
+    const addCartAPIURL = "https://localhost:5000/api/cartAPI/" + cartid;
     console.log(cartid);
     
     fetch(addCartAPIURL, {
@@ -33,7 +33,7 @@ function addCart(cartid){
     })
 }
 function delCart(cartid){
-    const delCartAPIURL = "https://localhost:5000/api/cartAPI" + cartid;
+    const delCartAPIURL = "https://localhost:5000/api/cartAPI/" + cartid;
     console.log(cartid);
     
     fetch(delCartAPIURL, {
