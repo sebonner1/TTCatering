@@ -1,4 +1,6 @@
 using System;
+using API.Cartfunctions;
+using System.Data.SQLite;
 
 namespace TTCatering.Cartfunctions.removeCart
 {
@@ -6,11 +8,11 @@ namespace TTCatering.Cartfunctions.removeCart
     {
         public void DeleteCartItem(int value)
         {
-            string cs = @"placeholder";
+            string cs = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
             using var con = new SQLiteConnection(cs);
             con.Open(); 
 
-            string stm = @"DELETE FROM posts WHERE postid =@id";
+            string stm = @"DELETE FROM cart WHERE cartid =@id";
             using var cmd = new SQLiteCommand(stm, con);
             cmd.Parameters.AddWithValue("@id",value);
             cmd.Prepare();

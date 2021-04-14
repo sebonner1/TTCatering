@@ -1,5 +1,6 @@
+console.log("javascript loaded");
 function getCart(){
-    const allCartAPIURL = "https://localhost:5001/api/MenuItems";
+    const allCartAPIURL = "https://localhost:5000/api/MenuItems";
 
     fetch(allCartAPIURL).then(function(response){
         return response.json();
@@ -17,7 +18,7 @@ function getCart(){
     })
 }
 function addCart(cartid){
-    const addCartAPIURL = "https://localhost:5001/api/cartAPI" + cartid;
+    const addCartAPIURL = "https://localhost:5000/api/cartAPI" + cartid;
     console.log(cartid);
     
     fetch(addCartAPIURL, {
@@ -32,7 +33,7 @@ function addCart(cartid){
     })
 }
 function delCart(cartid){
-    const delCartAPIURL = "https://localhost:5001/api/cartAPI" + cartid;
+    const delCartAPIURL = "https://localhost:5000/api/cartAPI" + cartid;
     console.log(cartid);
     
     fetch(delCartAPIURL, {
@@ -41,6 +42,24 @@ function delCart(cartid){
             "Accept": 'application/json',
             "Content-Type": 'application/json'
         }
+    }).then((response)=>{
+        console.log(response);
+        getCart();
+    })
+}
+function chickenparmfunction(){
+    const addPostsAPIURL = "https://localhost:5000/api/cartAPI";
+    const itemPost = "chickenparm";
+    console.log(itemPost);
+    fetch(addPostsAPIURL, {
+        method: "POST",
+        headers: {
+            "Accept": 'application/json',
+            "Content-Type": 'application/json',
+        },
+        body: JSON.stringify({
+          itemName: itemPost
+        })
     }).then((response)=>{
         console.log(response);
         getCart();

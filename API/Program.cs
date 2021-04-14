@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TTCatering.Cartfunctions;
 
 namespace API
 {
@@ -13,6 +14,8 @@ namespace API
     {
         public static void Main(string[] args)
         {
+            seedData seed = new seedData();
+            seed.SeedData();
             CreateHostBuilder(args).Build().Run();
         }
 

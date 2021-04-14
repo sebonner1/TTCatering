@@ -1,10 +1,10 @@
 using System;
 
-namespace TTCatering.Cartfunctions
+namespace API.Cartfunctions
 {
     public class cart
     {
-        public int itemid{get; set;}
+        public int cartid{get; set;}
         public string itemName{get; set;}
         public double price{get; set;}
         public int quantity {get; set;}
