@@ -1,5 +1,5 @@
 function getCart(){
-    const allCartAPIURL = "https://localhost:5001/api/cartAPI";
+    const allCartAPIURL = "https://localhost:5001/api/MenuItems";
 
     fetch(allCartAPIURL).then(function(response){
         return response.json();
