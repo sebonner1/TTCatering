@@ -52,21 +52,69 @@ a.red {
     width: 25%;
     font-family: "Montserrat";
 }
-
-#shoppingcartimage{
+#chickenParmImage{
     border-radius: 50%;
-    height:40px;
+    height:200px;
+    width: 200px;
 }
-
-#shoppingcartbutton{
+#chickenParmbutton{
     border-radius: 50%;
-    height:50px;
+    height:210px;
     text-align: center;
 }
-
+#chocochipImage{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+}
+#chocochipbutton{
+    border-radius: 50%;
+    height:210px;
+    text-align: center;
+}
+#vegburgImage{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+}
+#vegburgbutton{
+    border-radius: 50%;
+    height:210px;
+    text-align: center;
+}
+#chickensandImage{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+}
+#chickensandbutton{
+    border-radius: 50%;
+    height:210px;
+    text-align: center;
+}
+#turkImage{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+}
+#turkbutton{
+    border-radius: 50%;
+    height:210px;
+    text-align: center;
+}
+#saladImage{
+    border-radius: 50%;
+    height:200px;
+    width: 200px;
+}
+#saladbutton{
+    border-radius: 50%;
+    height:210px;
+    text-align: center;
+}
 .shoppinglist {
     float: right;
-    width: 30%;
+    width: 45%;
     background-color: grey;
     text-align: center;
     padding: 10px;
