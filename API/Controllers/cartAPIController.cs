@@ -10,6 +10,7 @@ using API.Cartfunctions.getCart;
 using TTCatering.Cartfunctions.removeCart;
 using TTCatering.Cartfunctions.updateCart;
 using API.Cartfunctions;
+using Microsoft.AspNetCore.Cors;
 
 namespace API.Controllers
 {
@@ -18,7 +19,7 @@ namespace API.Controllers
     public class cartAPIController : ControllerBase
     {
         // GET: api/cartAPI
-        //[EnableCors("AnotherPolicy")]
+        [EnableCors("AnotherPolicy")]
         [HttpGet]
         public List<cart> Get()
         {
@@ -26,25 +27,26 @@ namespace API.Controllers
             return readObject.GetAllItems();
         }
 
-        // GET: api/cartAPI/5
-        //[EnableCors("AnotherPolicy")]
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        // // GET: api/cartAPI/5
+        // //[EnableCors("AnotherPolicy")]
+        // [HttpGet("{id}", Name = "Get")]
+        // public string Get(int id)
+        // {
+        //     return "value";
+        // }
 
         // POST: api/cartAPI
-        //[EnableCors("AnotherPolicy")]
+        [EnableCors("AnotherPolicy")]
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            Console.WriteLine(value);
             iPostCart insertObject = new saveData();
             insertObject.UpdateCart(value);
         }
 
         // PUT: api/cartAPI/5
-        //[EnableCors("AnotherPolicy")]
+        [EnableCors("AnotherPolicy")]
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
@@ -53,7 +55,7 @@ namespace API.Controllers
         }
 
         // DELETE: api/cartAPI/5
-        //[EnableCors("AnotherPolicy")]
+        [EnableCors("AnotherPolicy")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

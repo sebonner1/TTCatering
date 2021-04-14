@@ -8,7 +8,7 @@ namespace TTCatering.Cartfunctions.removeCart
     {
         public void DeleteCartItem(int value)
         {
-            string cs = @"URI=/Users/katherine/Documents/TitleTownCatering/Cartfunctions/cart.db";
+            string cs = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
             using var con = new SQLiteConnection(cs);
             con.Open(); 
 

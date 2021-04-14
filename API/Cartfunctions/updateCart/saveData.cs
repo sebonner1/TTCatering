@@ -8,7 +8,7 @@ namespace TTCatering.Cartfunctions.updateCart
     {
         public void UpdateCart(string value)
         {
-            string cs = @"URI=/Users/katherine/Documents/TitleTownCatering/Cartfunctions/cart.db";
+            string cs = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
             using var con = new SQLiteConnection(cs);
             con.Open(); 
 
@@ -16,8 +16,8 @@ namespace TTCatering.Cartfunctions.updateCart
 
             cmd.CommandText = @"INSERT INTO cart(itemName, quantity, price) VALUES(@itemName, @quantity, @price)";
             cmd.Parameters.AddWithValue("@itemName", value);
-            cmd.Parameters.AddWithValue("@quantity", value);
-            cmd.Parameters.AddWithValue("@price", value);
+            cmd.Parameters.AddWithValue("@quantity", 1);
+            cmd.Parameters.AddWithValue("@price", 2);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
         }
