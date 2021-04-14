@@ -16,7 +16,7 @@ namespace TTCatering.Cartfunctions
             cmd.CommandText = "DROP TABLE IF EXISTS cart";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = @"CREATE TABLE cart(itemid INTEGER PRIMARY KEY, itemName TEXT, price DOUBLE, quantity INTEGER)";
+            cmd.CommandText = @"CREATE TABLE cart(cartid INTEGER PRIMARY KEY, itemName TEXT, price DOUBLE, quantity INTEGER)";
             cmd.ExecuteNonQuery();
         }
     }
