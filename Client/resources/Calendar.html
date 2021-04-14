@@ -21,60 +21,25 @@
     </nav>
     <div id="Calendar">
       <iframe src="https://calendar.google.com/calendar/embed?src=titletowncatering%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
-      
+    </div>  
+
+<script src="https://jsuites.net/v4/jsuites.js"></script>
+<script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
+<link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+ 
+<jsuites-calendar value="2021-01-20" format="DD/MM/YYYY"></jsuites-calendar>
+ 
+<script>
+document.querySelector('jsuites-calendar').addEventListener('onchange', function(e) {
+    console.log('New value: ' + e.target.value);
+});
+document.querySelector('jsuites-calendar').addEventListener('onclose', function(e) {
+    console.log('Calendar is closed');
+});
+</script>
+
+    <div id="container">
       <form name="month" id="month" action="/action_page.php">
-        Month: <select name="Day" id="date">
-          <option value="" selected="selected">Choose a month</option>
-          <option value="January">January</option>
-          <option value="February">February</option>
-          <option value="March">March</option>
-          <option value="April">April</option>
-          <option value="May">May</option>
-          <option value="June">June</option>
-          <option value="July">July</option>
-          <option value="August">August</option>
-          <option value="September">September</option>
-          <option value="October">October</option>
-          <option value="November">November</option>
-          <option value="December">December</option>
-        </select>
-        <br><br>
-        Day: <select name="day" id="day">
-          <option value="" selected="selected">Please select a month first</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-        </select>
-        <br><br>
-        Time: <select name="time" id="time">
           <option value="" selected="selected">Please select a day first</option>
           <option value="7:00 AM">7:00 AM</option>
           <option value="8:00 AM">8:00 AM</option>
@@ -91,8 +56,22 @@
           <option value="7:00 AM">7:00 PM</option>
         </select>
         <br><br>
+          Method: <select name="method" id="method">
+          <option value="" selected="selected">Please select a time first</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Delivery">Delivery</option>
+        </select>
+        <br><br>
+        Address: <input type="text" id="address" name="Address">
+        <br><br>
         <input type="submit" value="Submit">
-      </form>
+      </div>
+      <script src="https://jsuites.net/v4/jsuites.js"></script>
+<link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+ 
+<input id='calendar'>
+ 
+
       <!--
 <div class="month">
     <ul>

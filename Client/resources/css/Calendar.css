@@ -198,3 +198,9 @@ html{
   background-color: #660000;
   opacity: 1;
 }
+
+#container{
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}

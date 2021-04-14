@@ -1,7 +1,7 @@
   window.onload = function() {
-    var monthSel = document.getElementById("month");
-    var daySel = document.getElementById("day");
     var timeSel = document.getElementById("time");
+    var addressSel = document.getElementById("address");
+    
     for (var x in monthObject) {
       monthSel.options[monthSel.options.length] = new Option(x, x);
     }
