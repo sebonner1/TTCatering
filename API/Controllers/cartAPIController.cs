@@ -48,7 +48,7 @@ namespace API.Controllers
         // PUT: api/cartAPI/5
         [EnableCors("AnotherPolicy")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] cart value)
         {
             iAddCart putObject = new addCart();
             putObject.addCartItem(id, value);
