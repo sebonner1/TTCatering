@@ -13,6 +13,7 @@ namespace API
     {
         public static void Main(string[] args)
         {
+            seedData.SeedData();
             CreateHostBuilder(args).Build().Run();
         }
 
