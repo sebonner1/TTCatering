@@ -2,6 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Cartfunctions.getCart;
+using API.CateringEventFunctions;
+using API.CateringEventFunctions.addEvent;
+using API.CateringEventFunctions.getEvents;
+using API.CateringEventFunctions.removeEvent;
+using API.CateringEventFunctions.updateEvents;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,9 +19,10 @@ namespace API.Controllers
     {
         // GET: api/CateringEvent
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<CateringEvent> Get()
         {
-            return new string[] { "value1", "value2" };
+            iReadAllEventData readEventObject = new readEventData();
+            return readEventObject.GetAllItems();
         }
 
         // // GET: api/CateringEvent/5
@@ -27,20 +34,28 @@ namespace API.Controllers
 
         // POST: api/CateringEvent
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] CateringEvent value)
         {
+            Console.WriteLine(value);
+            iPostEvent insertObject = new saveEventData();
+            insertObject.UpdateEvent(value.orderID, value.orderPlaced,  value.fulfilledStatus, value.orderEventMethod, value.orderDescription);
         }
 
         // PUT: api/CateringEvent/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] CateringEvent value)
         {
+            iAddEvent putObject = new addEvent(value.orderID, value.orderPlaced, value.fulfilledStatus, value.orderEventMethod, value.orderDescription);
+            putObject.addOrderEvent(value.orderID, value.orderPlaced,  value.fulfilledStatus, value.orderEventMethod, value.orderDescription);
         }
 
         // DELETE: api/CateringEvent/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            iDelEvent deleteObject = new delEvent();
+            deleteObject.DeleteOrderEvent(id);
+            Console.WriteLine(id);
         }
     }
 }
