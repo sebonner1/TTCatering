@@ -61,3 +61,24 @@ submitbutton.addEventListener("click", (a) => {
 //         alert("Everything is correct");
 //     }
 // });
+console.log("javascript loaded");
+function getCartItems(){
+const allCartAPIURL = "https://localhost:5000/api/cartAPI";
+
+fetch(allCartAPIURL).then(function(response){
+return response.json();
+}).then(function(json){
+let html = "<ul>";
+json.forEach((CartItem)=>{
+html += "<tbody><tr>",
+html += "<td>"+CartItem.itemName+"</td>",
+html += '<td class="alignright">'+CartItem.price+"</td>",
+html += "</tr>",
+html += "</tbody></table>";
+})
+html += "</ul>";
+document.getElementById("cartitems").innerHTML = html;
+}).catch(function(error){
+console.log(error);
+})
+}
