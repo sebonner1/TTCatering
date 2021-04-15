@@ -7,8 +7,27 @@ function getCart(){
     }).then(function(json){
         let html = "<ul>";
         json.forEach((CartItem)=>{
-            html += "<li>" +"<button onclick=\"addCart("+CartItem.cartid+")\">+</button>",
+            html += "<li id = item" + CartItem.cartid+ " quantitya = "+ CartItem.quantity+ ">" +CartItem.quantity,
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
             html += CartItem.itemName,
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "$" + CartItem.price,
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "&nbsp",
+            html += "<button onclick=\"addCart("+CartItem.cartid+")\">+</button>",
             html += "<button onclick=\"delCart("+CartItem.cartid+")\">-</button>" + "</li>"
         })
         html += "</ul>";
@@ -20,13 +39,16 @@ function getCart(){
 function addCart(cartid){
     const addCartAPIURL = "https://localhost:5000/api/cartAPI/" + cartid;
     console.log(cartid);
-    
+    var item = {
+        quantity : document.getElementById("item"+cartid).getAttribute("quantitya"),
+    }
     fetch(addCartAPIURL, {
         method: "PUT",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json'
-        }
+        },
+        body: JSON.stringify(item)
     }).then((response)=>{
         console.log(response);
         getCart();
@@ -53,9 +75,9 @@ function chickenparmfunction(){
     itemPost = itemPost.toString();
     var item = {
         cartid: 2,
-        itemName: "chicken parmesan",
-        price: 1,
-        quantity: 2
+        itemName: "Chicken Parmesan",
+        price: 11.50,
+        quantity: 1
     }
     console.log(itemPost);
     fetch(postCartAPIURL, {
@@ -76,9 +98,9 @@ function chocchipfunction(){
     itemPost = itemPost.toString();
     var item = {
         cartid: 2,
-        itemName: "chocolate chip cookie(s)",
-        price: 1,
-        quantity: 2
+        itemName: "Chocolate Chip Cookie(s)",
+        price: 2.50,
+        quantity: 1
     }
     console.log(itemPost);
     fetch(postCartAPIURL, {
@@ -100,8 +122,8 @@ function vegburgfunction(){
     var item = {
         cartid: 2,
         itemName: "Veggie Burger",
-        price: 1,
-        quantity: 2
+        price: 10.00,
+        quantity: 1
     }
     console.log(itemPost);
     fetch(postCartAPIURL, {
@@ -122,9 +144,9 @@ function chicksaladfunction(){
     itemPost = itemPost.toString();
     var item = {
         cartid: 2,
-        itemName: "chicken salad sandwich",
-        price: 1,
-        quantity: 2
+        itemName: "Chicken Salad Sandwich",
+        price: 6.75,
+        quantity: 1
     }
     console.log(itemPost);
     fetch(postCartAPIURL, {
@@ -146,8 +168,8 @@ function turkfunction(){
     var item = {
         cartid: 2,
         itemName: "Turkey Melt",
-        price: 1,
-        quantity: 2
+        price: 5.25,
+        quantity: 1
     }
     console.log(itemPost);
     fetch(postCartAPIURL, {
@@ -168,9 +190,9 @@ function housesaladfunction(){
     itemPost = itemPost.toString();
     var item = {
         cartid: 2,
-        itemName: "house salad",
-        price: 1,
-        quantity: 2
+        itemName: "House Salad",
+        price: 7.5,
+        quantity: 1
     }
     console.log(itemPost);
     fetch(postCartAPIURL, {
