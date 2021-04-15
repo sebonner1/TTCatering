@@ -11,7 +11,7 @@ namespace TTCatering.Cartfunctions.updateCart
             string cs = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
             using var con = new SQLiteConnection(cs);
             con.Open(); 
-
+            Console.WriteLine("I made it to the price and it is " + price);
             using var cmd = new SQLiteCommand(con);
 
             cmd.CommandText = @"INSERT INTO cart(itemName, quantity, price) VALUES(@itemName, @quantity, @price)";
