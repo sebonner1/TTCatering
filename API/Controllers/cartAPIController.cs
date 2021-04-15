@@ -42,7 +42,7 @@ namespace API.Controllers
         {
             Console.WriteLine(value);
             iPostCart insertObject = new saveData();
-            insertObject.UpdateCart(value.itemName);
+            insertObject.UpdateCart(value.itemName, value.price);
         }
 
         // PUT: api/cartAPI/5

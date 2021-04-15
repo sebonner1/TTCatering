@@ -19,6 +19,18 @@ namespace TTCatering.Cartfunctions.addCart
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
+
+            string css = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
+            using var cons = new SQLiteConnection(css);
+            con.Open();
+            
+            var newP = value.price * newQ;
+
+            string stms = @"UPDATE cart set price = '" + newP + "' WHERE cartid = @id";
+            using var cmds = new SQLiteCommand(stms, cons);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
         }
     }
 }
