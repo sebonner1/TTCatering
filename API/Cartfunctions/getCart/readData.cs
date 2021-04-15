@@ -9,7 +9,7 @@ namespace API.Cartfunctions.getCart
         {
             List<cart> allItems = new List<cart>();
 
-            string cs = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
+            string cs = @"URI=file:../cart.db";
             using var con = new SQLiteConnection(cs);
             con.Open();
 

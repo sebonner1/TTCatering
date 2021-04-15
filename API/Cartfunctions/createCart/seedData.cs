@@ -7,7 +7,7 @@ namespace TTCatering.Cartfunctions
     {
         public void SeedData()
         {
-            string cs = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
+            string cs = @"URI=file:../cart.db";
             using var con = new SQLiteConnection(cs);
             con.Open(); 
 
