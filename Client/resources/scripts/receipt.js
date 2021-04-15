@@ -64,7 +64,7 @@ function getCartItems(){
         json.forEach((CartItem)=>{
             html += "<tbody><tr>",
             html += "<td>"+CartItem.itemName+"</td>",
-            html += '<td class="alignright">'+CartItem.price+"</td>",
+            html += '<td class="alignright">'+'$'+CartItem.price+"</td>",
             html += "</tr>",
             html += "</tbody></table>";
         })
