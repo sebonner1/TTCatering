@@ -31,3 +31,12 @@ function loadTimes()
   <option value="7:00 AM">7:00 PM</option>
   `;
 }
+
+const submitbutton = document.getElementById("submitbutton");
+console.log(submitbutton);
+
+// the below syntax from research
+submitbutton.addEventListener("click", (a) => {
+    alert("You are being directed to the receipt.");
+    window.location.href= "../resources/Receipt.html";
+})
