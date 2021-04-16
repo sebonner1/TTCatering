@@ -7,7 +7,8 @@ function getCart(){
     }).then(function(json){
         let html = "<ul>";
         json.forEach((CartItem)=>{
-            html += "<li id = item" + CartItem.cartid+ " quantitya = "+ CartItem.quantity+ ">" +CartItem.quantity,
+            html += "<li id = item" +CartItem.cartid+" pricea = " + CartItem.price + "",
+            html += "id = item" + CartItem.cartid+ " quantitya = "+ CartItem.quantity+ ">" +CartItem.quantity,
             html += "&nbsp",
             html += "&nbsp",
             html += "&nbsp",
@@ -40,7 +41,8 @@ function addCart(cartid){
     const addCartAPIURL = "https://localhost:5000/api/cartAPI/" + cartid;
     console.log(cartid);
     var item = {
-        quantity : document.getElementById("item"+cartid).getAttribute("quantitya"),
+        quantity : parseInt(document.getElementById("item"+cartid).getAttribute("quantitya")),
+        price: parseFloat(document.getElementById("item"+cartid).getAttribute("pricea")),
     }
     fetch(addCartAPIURL, {
         method: "PUT",
@@ -50,6 +52,7 @@ function addCart(cartid){
         },
         body: JSON.stringify(item)
     }).then((response)=>{
+        myCart = item;
         console.log(response);
         getCart();
     })
