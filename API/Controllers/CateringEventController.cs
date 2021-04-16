@@ -45,7 +45,7 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] CateringEvent value)
         {
-            iAddEvent putObject = new addEvent(value.orderID, value.orderPlaced, value.fulfilledStatus, value.orderEventMethod, value.orderDescription);
+            iAddEvent putObject = new addEvent();
             putObject.addOrderEvent(value.orderID, value.orderPlaced,  value.fulfilledStatus, value.orderEventMethod, value.orderDescription);
         }
 
