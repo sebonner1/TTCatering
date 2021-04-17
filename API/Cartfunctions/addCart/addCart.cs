@@ -13,29 +13,14 @@ namespace TTCatering.Cartfunctions.addCart
             con.Open();
             
             var newQ = value.quantity +1;
+            var newP = value.price * newQ;
+            Console.WriteLine(value.price + " "+ newQ);
 
-            string stm = @"UPDATE cart set quantity = '" + newQ + "' WHERE cartid = @id";
+            string stm = @$"UPDATE cart set quantity = {newQ}, price = {newP} WHERE cartid = @id";
             using var cmd = new SQLiteCommand(stm, con);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
-            //con.Close();
-
-            string css = @"URI=file:../cart.db";
-            using var cons = new SQLiteConnection(css);
-            con.Open();
-            // string css = @"URI=/Users/katherine/Documents/TTCatering/API/Cartfunctions/cart.db";
-            // using var cons = new SQLiteConnection(css);
-            // cons.Open();
-            
-            var newP = value.price * newQ;
-            Console.WriteLine(value.price + " "+ newQ);
-
-            string stms = @"UPDATE cart set price = '" + newP + "' WHERE cartid = @id";
-            using var cmds = new SQLiteCommand(stms, con);
-            cmds.Parameters.AddWithValue("@id", id);
-            cmds.Prepare();
-            cmds.ExecuteNonQuery();
             con.Close();
         }
     }
