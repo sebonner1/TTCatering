@@ -13,7 +13,7 @@ namespace TTCatering.Cartfunctions.addCart
             con.Open();
             
             var newQ = value.quantity +1;
-            var newP = value.price * newQ;
+            var newP = (value.price / value.quantity) * newQ;
             Console.WriteLine(value.price + " "+ newQ);
 
             string stm = @$"UPDATE cart set quantity = {newQ}, price = {newP} WHERE cartid = @id";
