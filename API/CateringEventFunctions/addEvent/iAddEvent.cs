@@ -5,6 +5,6 @@ namespace API.CateringEventFunctions.addEvent
 {
     public interface iAddEvent
     {
-         public void addOrderEvent(int orderID, DateTime orderPlaced, bool fulfilledStatus, int orderEventMethod, string orderDescription);
+         public void addOrderEvent(int orderID, DateTime orderPlaced, DateTime orderDate, bool fulfilledStatus, int orderEventMethod, string orderDescription);
     }
 }

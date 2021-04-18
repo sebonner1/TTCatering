@@ -17,7 +17,7 @@ namespace API.CateringEventFunctions.createEvent
             cmd.CommandText = "DROP TABLE IF EXISTS OrderEvent";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = @"CREATE TABLE cart(orderID INTEGER PRIMARY KEY, orderPlaced DATETIME, fulfilledStatus BOOL, orderEventMethod INTEGER, orderDescription TEXT)";
+            cmd.CommandText = @"CREATE TABLE cart(orderID INTEGER PRIMARY KEY, orderPlaced DATETIME, orderDate DATETIME, fulfilledStatus BOOL, orderEventMethod INTEGER, orderDescription TEXT)";
             cmd.ExecuteNonQuery();
         }
     }
