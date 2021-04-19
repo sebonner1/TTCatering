@@ -26,6 +26,7 @@
 <div class="reportdropdown">
 <h2>Choose a report to view:</h2>
 <select name="reports" id="reports">
+  <option value="View all" onclick = ViewAllReports()>View all</option>
   <option value="Orders per month">Orders per month</option>
   <option value="Most popular items">Most popular items</option>
   <option value="Most profitable items">Most profitable items</option>
@@ -34,15 +35,21 @@
   <option value="Least popular item">Least popular item</option>
 </select>
 </div>
-<script type = "text/javascript" src = "./scripts/cartfunc.js">
+<!--<script type = "text/javascript" src = "./scripts/cartfunc.js">
   getCart();
-</script>
+</script>-->
   <div id="cartitems"></div>
 <h2>Upcoming events:</h2>
 <div class="upcoming">
   <script>
     getEvents();
   </script>
+<div>
+  <script>
+  getAllReports();
+  </script>
 </div>
+</div>
+<script src="./scripts/displayAll.js"></script> <!--put scripts at the bottom-->
 </body>
 </html>
