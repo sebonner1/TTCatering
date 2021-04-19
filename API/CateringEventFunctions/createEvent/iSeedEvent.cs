@@ -5,6 +5,6 @@ namespace API.CateringEventFunctions.createEvent
 {
     public interface iSeedEvent
     {
-        public void SeedData();
+        public void SeedEventData();
     }
 }

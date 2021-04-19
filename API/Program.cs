@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using TTCatering.Cartfunctions;
 using API.TotalCartFunctions;
+using API.CateringEventFunctions.createEvent;
 
 namespace API
 {
@@ -18,6 +19,7 @@ namespace API
         {
             seedData seed = new seedData();
             seed.SeedData();
+
             CreateHostBuilder(args).Build().Run();
         }
 
