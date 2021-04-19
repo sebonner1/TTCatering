@@ -1,13 +1,13 @@
 console.log("javascript loaded");
 function getEvents(){
-    const allCartAPIURL = "https://localhost:5000/api/cartAPI";
+    const allEventsAPIURL = "https://localhost:5000/api/CateringEvent";
 
-    fetch(allCartAPIURL).then(function(response){
+    fetch(allEventsAPIURL).then(function(response){
         return response.json();
     }).then(function(json){
         let html = "<ul>";
         json.forEach((CateringEvent)=>{
-            html += "<li id = event" + CateringEvent.orderID+ " descriptiona = "+ CateringEvent.orderDescription+ ">" +CartItem.quantity,
+            html += "<li id = event" + CateringEvent.orderID+ " description = "+ CateringEvent.orderDescription+ ">" +CartItem.quantity,
             html += "&nbsp",
             html += "&nbsp",
             html += "&nbsp",
@@ -15,20 +15,12 @@ function getEvents(){
             html += "&nbsp",
             html += "&nbsp",
             html += "&nbsp",
-            html += "&nbsp",
-            html += "&nbsp",
-            html += "&nbsp",
-            html += "&nbsp",
-            html += "&nbsp",
-            html += "&nbsp",
             html += CateringEvent.orderDate,
             html += "&nbsp",
             html += "&nbsp",
             html += "&nbsp",
-            html += "&nbsp",
-            html += "&nbsp",
             html += "<button onclick=\"addEvent("+CateringEvent.orderID+")\">+</button>",
-            html += "<button onclick=\"delCart("+CateringEvent.orderID+")\">-</button>" + "</li>"
+            html += "<button onclick=\"delEvent("+CateringEvent.orderID+")\">-</button>" + "</li>"
         })
         html += "</ul>";
         document.getElementById("cateringevents").innerHTML = html;
@@ -40,7 +32,7 @@ function addEvent(orderID){
     const addCartAPIURL = "https://localhost:5000/api/cartAPI/" + orderID;
     console.log(orderID);
     var event = {
-        description: document.getElementById("event"+orderID).getAttribute("descriptiona"),
+        description: document.getElementById("event"+orderID).getAttribute("description"),
     }
     fetch(addCartAPIURL, {
         method: "PUT",
@@ -54,11 +46,11 @@ function addEvent(orderID){
         getCart();
     })
 }
-function delCart(orderID){
-    const delCartAPIURL = "https://localhost:5000/api/cartAPI/" + orderID;
+function delEvent(orderID){
+    const delEventAPIURL = "https://localhost:5000/api/cartAPI/" + orderID;
     console.log(orderID);
     
-    fetch(delCartAPIURL, {
+    fetch(delEventAPIURL, {
         method: "DELETE",
         headers: {
             "Accept": 'application/json',
