@@ -11,7 +11,7 @@ loginButton.addEventListener("click", (e) => {
     // The manager login is below, working on taking it to the next page, the dashboard
     if (username === "TTCManager" && password === "TitleTown") {
         alert("You have successfully logged in.");
-        window.location.href= "../resources/ManagerDashboard";
+        window.location.href= "../resources/ManagerDashboard.html";
     } else {
         loginErrorMsg.style.opacity = 1;
     }

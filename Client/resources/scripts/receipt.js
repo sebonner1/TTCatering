@@ -74,3 +74,9 @@ function getCartItems(){
         console.log(error);
     })
 }
+
+const purchaseButton = document.getElementById("confirm-purchase");
+purchaseButton.addEventListener("click", (e) => {
+    alert("You have completed your transaction.");
+    window.location.href= "../resources/index.html";
+})
