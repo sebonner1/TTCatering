@@ -55,6 +55,7 @@ function addCart(cartid){
         myCart = item;
         console.log(response);
         getCart();
+        getAllReports();
     })
 }
 function delCart(cartid){

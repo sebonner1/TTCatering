@@ -24,7 +24,7 @@ namespace TTCatering.Cartfunctions.addCart
             cmd.ExecuteNonQuery();
             con.Close();
 
-            addChickenParm.Add(id, value);
+            addChickenParm.Add(orderID, value);
         }
     }
 }
