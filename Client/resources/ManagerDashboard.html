@@ -7,7 +7,7 @@
     <title>Manager Dashboard</title>
     <link rel="stylesheet" href="../resources/css/ManagerDashboard.css">
 </head>
-<body>
+<body onload = "getAllReports()">
 
   <div class="banner">
     <h1>Welcome to the Manager Dashboard</h1>
@@ -26,7 +26,7 @@
 <div class="reportdropdown">
 <h2>Choose a report to view:</h2>
 <select name="reports" id="reports">
-  <option value="View all" onclick = getAllReports()>View all</option>
+  <option value="View all" onchange = "getAllReports()">View all</option>
   <option value="Orders per month">Orders per month</option>
   <option value="Most popular items">Most popular items</option>
   <option value="Most profitable items">Most profitable items</option>
