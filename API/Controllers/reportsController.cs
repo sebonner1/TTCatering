@@ -19,8 +19,8 @@ namespace API.Controllers
         [HttpGet]
         public List<carttotals> Get()
         {
-            TestReport test = new TestReport();
-            return test;
+            ViewAll test = new ViewAll();
+            return test.ViewAllReports();
         }
 
         // // GET: api/reports/5
