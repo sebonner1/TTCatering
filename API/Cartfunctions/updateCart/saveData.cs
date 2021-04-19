@@ -1,6 +1,7 @@
 using System;
 using API.Cartfunctions;
 using System.Data.SQLite;
+using API.TotalCartFunctions;
 
 namespace TTCatering.Cartfunctions.updateCart
 {
@@ -20,6 +21,8 @@ namespace TTCatering.Cartfunctions.updateCart
             cmd.Parameters.AddWithValue("@price", price);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
+            cart addparm = new cart(){itemName =value, quantity =0, price=price};
+            addChickenParm.Add(addparm);
         }
     }
 }

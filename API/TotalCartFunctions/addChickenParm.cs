@@ -7,14 +7,24 @@ namespace API.TotalCartFunctions
 {
     public class addChickenParm
     {
-        public static void Add(int id, cart value)
+        public static void Add(cart value)
         {
+            Console.WriteLine("made it to add");
+            int id = maxIDfinder.find();
+            Console.WriteLine(id);
             string cs = @"URI=file:../carttotals.db";
             using var con = new SQLiteConnection(cs);
             con.Open();
             
             var newQ = value.quantity +1;
-            var newP = (value.price / value.quantity) * newQ;
+            var newP = 0.0;
+            if(value.quantity == 0){
+                newP = value.price * newQ;
+            }
+            else
+            {
+                newP = (value.price / value.quantity) * newQ;
+            }
             Console.WriteLine(value.price + " "+ newQ);
 
             string stm = @$"UPDATE carttotals set qckparm = {newQ}, pckparm = {newP} WHERE orderID = @id";

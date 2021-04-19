@@ -10,6 +10,7 @@ namespace API.Reports
     {
         public List<carttotals> ViewAllReports()
         {
+            Console.WriteLine("made it to viewallreports");
             List<carttotals> cartTotals = new List<carttotals>();
 
             string cs = @"URI=file:../carttotals.db";
