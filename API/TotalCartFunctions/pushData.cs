@@ -6,6 +6,7 @@ namespace API.TotalCartFunctions
 {
     public class pushData
     {
+        public static int orderID{get; set;}
         public void pushCartData()
         {
             string cs = @"URI=file:../carttotals.db";
@@ -31,6 +32,8 @@ namespace API.TotalCartFunctions
 
             cmd.Prepare();
             cmd.ExecuteNonQuery();
+            orderID++;
+            Console.WriteLine("made it to the pushData");
         }
     }
 }

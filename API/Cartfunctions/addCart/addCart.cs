@@ -23,7 +23,7 @@ namespace TTCatering.Cartfunctions.addCart
             cmd.Prepare();
             cmd.ExecuteNonQuery();
             con.Close();
-
+            int orderID = pushData.orderID;
             addChickenParm.Add(orderID, value);
         }
     }
