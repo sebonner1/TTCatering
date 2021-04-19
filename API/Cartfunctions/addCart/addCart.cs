@@ -1,6 +1,7 @@
 using System;
 using API.Cartfunctions;
 using System.Data.SQLite;
+using API.TotalCartFunctions;
 
 namespace TTCatering.Cartfunctions.addCart
 {
@@ -22,6 +23,8 @@ namespace TTCatering.Cartfunctions.addCart
             cmd.Prepare();
             cmd.ExecuteNonQuery();
             con.Close();
+
+            addChickenParm.Add(id, value);
         }
     }
 }

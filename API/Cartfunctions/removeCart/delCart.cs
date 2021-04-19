@@ -1,6 +1,7 @@
 using System;
 using API.Cartfunctions;
 using System.Data.SQLite;
+using API.TotalCartFunctions;
 
 namespace TTCatering.Cartfunctions.removeCart
 {
@@ -17,6 +18,8 @@ namespace TTCatering.Cartfunctions.removeCart
             cmd.Parameters.AddWithValue("@id",value);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
+
+            deleteChickenParm.Delete(value);
         }
     }
 }
