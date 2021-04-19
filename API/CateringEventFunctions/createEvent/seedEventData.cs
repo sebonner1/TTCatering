@@ -4,9 +4,9 @@ using API.Cartfunctions;
 
 namespace API.CateringEventFunctions.createEvent
 {
-    public class seedData : iSeedEvent
+    public class seedEventData : iSeedEvent
     {
-        public void SeedData()
+        public void SeedEventData()
         {
             string cs = @"URI=file:../OrderEvent.db";
             using var con = new SQLiteConnection(cs);
