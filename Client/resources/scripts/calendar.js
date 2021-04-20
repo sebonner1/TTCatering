@@ -50,3 +50,9 @@ function pushCartData()
           console.log(response);
     })
 }
+
+const submitbutton = document.getElementById("submitbutton");
+submitbutton.addEventListener("click", (e) => {
+    alert("You are being taken to the receipt for your transaction.");
+    window.location.href= "../resources/Receipt.html";
+})
