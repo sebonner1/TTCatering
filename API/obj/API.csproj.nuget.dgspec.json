@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/katherine/Documents/TTCatering/API/API.csproj": {}
+    "/Users/williambonner/Source/repos/TTCatering/API/API.csproj": {}
   },
   "projects": {
-    "/Users/katherine/Documents/TTCatering/API/API.csproj": {
+    "/Users/williambonner/Source/repos/TTCatering/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/katherine/Documents/TTCatering/API/API.csproj",
+        "projectUniqueName": "/Users/williambonner/Source/repos/TTCatering/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/katherine/Documents/TTCatering/API/API.csproj",
-        "packagesPath": "/Users/katherine/.nuget/packages/",
-        "outputPath": "/Users/katherine/Documents/TTCatering/API/obj/",
+        "projectPath": "/Users/williambonner/Source/repos/TTCatering/API/API.csproj",
+        "packagesPath": "/Users/williambonner/.nuget/packages/",
+        "outputPath": "/Users/williambonner/Source/repos/TTCatering/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/katherine/.nuget/NuGet/NuGet.Config"
+          "/Users/williambonner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
