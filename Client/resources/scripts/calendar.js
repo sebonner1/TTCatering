@@ -50,7 +50,7 @@ function pushCartData()
           console.log(response);
     })
 }
-
+// submit button
 const submitbutton = document.getElementById("submitbutton");
 submitbutton.addEventListener("click", (e) => {
     alert("You are being taken to the receipt for your transaction.");

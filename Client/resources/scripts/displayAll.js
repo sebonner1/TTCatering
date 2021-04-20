@@ -69,7 +69,13 @@ function getAllReports()
         console.log(error);
     })
 }
-const viewallreports = document.getElementById("viewallreports");
-viewallreports.addEventListener("click", (e) => {
-    getAllReports();
+
+const selectmenu = document.querySelector("select");
+selectmenu.addEventListener("input", (e) => {
+    //getAllReports();
+    console.log(e.target.value);
+    if(e.target.value = "viewall")
+    {
+        getAllReports();
+    }
 })
