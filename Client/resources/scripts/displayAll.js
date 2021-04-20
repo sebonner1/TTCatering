@@ -70,6 +70,7 @@ function getAllReports()
     })
 }
 
+// add to the if statement here
 const selectmenu = document.querySelector("select");
 selectmenu.addEventListener("input", (e) => {
     //getAllReports();
@@ -77,5 +78,31 @@ selectmenu.addEventListener("input", (e) => {
     if(e.target.value = "viewall")
     {
         getAllReports();
+    }
+    else{
+        if(e.target.value = "Orderspermonth")
+        {
+            // insert the method here
+        }
+        if(e.target.value = "Mostpopularitems")
+        {
+            // insert the method here
+        }
+        if(e.target.value = "Mostprofitableitems")
+        {
+            // insert the method here
+        }
+        if(e.target.value = "Percentpickupvsdelivered")
+        {
+            // insert the method here
+        }
+        if(e.target.value = "Mostpopularhours")
+        {
+            // insert the method here
+        }
+        if(e.target.value = "Leastpopularitem")
+        {
+            // insert the method here
+        }
     }
 })
