@@ -33,7 +33,7 @@ function loadTimes()
 
 const timeSelection = document.getElementById("timeselection");
 const daySelection = document.getElementById("weekdays_short");
-const addressInput = document.getElementById("address");
+const addressInput = document.getElementById("address"); // question in office hours: if the value changes but the id is the same, what do I call here?
 console.log(timeSelection);
 
 function pushCartData()
@@ -48,5 +48,5 @@ function pushCartData()
           }
       }).then((response)=>{
           console.log(response);
-      })
+    })
 }
