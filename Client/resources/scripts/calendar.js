@@ -42,8 +42,9 @@ function loadTimes()
 
 const timeSelection = document.getElementById("timeselection");
 // const daySelection = document.getElementById("weekdays_short");
-const addressInput = document.getElementById("address"); // question in office hours: if the value changes but the id is the same, what do I call here?
+var addressInput = document.getElementById("address"); // question in office hours: if the value changes but the id is the same, what do I call here?
 console.log(timeSelection);
+var methodSelection = document.getElementById("method");
 
 // if anything goes wrong, check the names here
 function pushCartData()
@@ -54,8 +55,14 @@ function pushCartData()
         orderPlaced: Date.Now(),
         orderDate: selectedDate + timeSelection,
         fulfilledStatus: "FALSE",
-        // orderEventMethod: ""
-        orderEventDescription: addressInput
+        if(methodSelection = "Pickup")
+        {
+            orderEventMethod: 1
+        },
+        else(){
+            orderEventMethod: 2
+        },
+        orderEventDescription: addressInput +","+ getDescription() // is this how I would do this?
     }
         
       fetch(postCateringEventAPIURL, {
