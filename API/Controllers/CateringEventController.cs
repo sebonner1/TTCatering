@@ -8,6 +8,7 @@ using API.CateringEventFunctions.addEvent;
 using API.CateringEventFunctions.getEvents;
 using API.CateringEventFunctions.removeEvent;
 using API.CateringEventFunctions.updateEvents;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,7 @@ namespace API.Controllers
     [ApiController]
     public class CateringEventController : ControllerBase
     {
+        [EnableCors("AnotherPolicy")]
         // GET: api/CateringEvent
         [HttpGet]
         public List<CateringEvent> Get()
@@ -33,6 +35,7 @@ namespace API.Controllers
         // }
 
         // POST: api/CateringEvent
+        [EnableCors("AnotherPolicy")]
         [HttpPost]
         public void Post([FromBody] CateringEvent value)
         {
@@ -42,6 +45,7 @@ namespace API.Controllers
         }
 
         // PUT: api/CateringEvent/5
+        [EnableCors("AnotherPolicy")]
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] CateringEvent value)
         {
@@ -50,6 +54,7 @@ namespace API.Controllers
         }
 
         // DELETE: api/CateringEvent/5
+        [EnableCors("AnotherPolicy")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
