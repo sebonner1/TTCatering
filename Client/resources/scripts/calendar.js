@@ -45,11 +45,13 @@ const timeSelection = document.getElementById("timeselection");
 const addressInput = document.getElementById("address"); // question in office hours: if the value changes but the id is the same, what do I call here?
 console.log(timeSelection);
 
+// if anything goes wrong, check the names here
 function pushCartData()
 {
     const postCateringEventAPIURL = "https://localhost:5000/api/CateringEvent";
     cateringEvent = cateringEvent.toString();
     var cateringEvent = {
+        orderPlaced: Date.Now(),
         orderDate: selectedDate + timeSelection,
         fulfilledStatus: "FALSE",
         // orderEventMethod: ""
