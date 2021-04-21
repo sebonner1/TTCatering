@@ -20,8 +20,6 @@ namespace API
             // seedData seed = new seedData();
             // seed.SeedData();
 
-            seedEventData seedie = new seedEventData();
-            seedie.SeedEventData();
 
             CreateHostBuilder(args).Build().Run();
         }
