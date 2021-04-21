@@ -74,7 +74,7 @@ function getAllReports()
         console.log(response);
         return response.json();
     }).then(function(json){
-        let html = "<table style=\"width:50%\">";
+        let html = "<table style=\"width:50%; border: 1px solid black\";>";
         json.forEach((CartTotal)=>{
             html+="<tr>";
             html+="<th>Order ID</th>";
