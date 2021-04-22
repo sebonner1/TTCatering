@@ -3,6 +3,9 @@ using API.CateringEventFunctions;
 using System;
 using System.Data.SQLite;
 using System.IO;
+using API;
+using MySql.Data.MySqlClient;
+using MySql.Data;
 
 namespace API.CateringEventFunctions.getEvents
 {
@@ -12,14 +15,20 @@ namespace API.CateringEventFunctions.getEvents
         {
             List<CateringEvent> allCateringEvents = new List<CateringEvent>();
 
-            string cs = @"URI=file:../OrderEvent.db";
-            using var con = new SQLiteConnection(cs);
+            // string cs = @"URI=file:../OrderEvent.db";
+            // using var con = new SQLiteConnection(cs);
+            // con.Open();
+
+            ConnectionString myConnection = new ConnectionString();
+            string cs = myConnection.cs;
+
+            using var con = new MySqlConnection(cs);
             con.Open();
 
             string stm = "SELECT * FROM OrderEvent";
-            using var cmd = new SQLiteCommand(stm, con);
+            using var cmd = new MySqlCommand(stm, con);
 
-            using SQLiteDataReader rdr = cmd.ExecuteReader();
+            using MySqlDataReader rdr = cmd.ExecuteReader();
 
             while(rdr.Read())
             {
