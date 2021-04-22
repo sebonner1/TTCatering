@@ -51,17 +51,19 @@ function pushCartData()
 {
     const postCateringEventAPIURL = "https://localhost:5000/api/CateringEvent";
     cateringEvent = cateringEvent.toString();
+    var temp;
+    if(methodSelection = "Pickup")
+    {
+        temp= 1;
+    }
+    else{
+            temp= 2;
+    }
     var cateringEvent = {
         orderPlaced: Date.Now(),
         orderDate: selectedDate + timeSelection,
         fulfilledStatus: "FALSE",
-        if(methodSelection = "Pickup")
-        {
-            orderEventMethod: 1
-        },
-        else(){
-            orderEventMethod: 2
-        },
+        orderEventMethod: temp,
         orderEventDescription: addressInput +","+ getDescription() // is this how I would do this?
     }
         
